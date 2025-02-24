@@ -26,7 +26,7 @@ const Stars = () => {
             const cols = Math.floor(windowWidth / gridSize);
             const rows = Math.floor(windowHeight / gridSize);
 
-            const colors = ['#ffffff', '#f0f8ff', '#e0ffff', '#d8bfd8'];
+            const colors = ['#ffffff', '#E14E87', '#E8B125', '#2BC9EC'];
 
 
             for (let i = 0; i < starCount; i++) {

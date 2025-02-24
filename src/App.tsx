@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Stars from './components/Stars/Stars';
+import Home from './components/Home/Home';
+import Why from './components/Why/Why';
 
 interface SectionRefs {
   [key: string]: React.RefObject<HTMLDivElement>;
@@ -48,6 +50,12 @@ function App() {
     <div className="App">
       <Stars />
       <Navbar scrollToSection={scrollToSection} openMenu={openMenu} />
+      <div className="Section">
+        <Home />
+      </div>
+      <div className="Section">
+        <Why />
+      </div>
     </div>
   );
 }

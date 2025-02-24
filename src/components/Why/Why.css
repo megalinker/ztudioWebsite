@@ -1,0 +1,36 @@
+.why-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+.why-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 0;
+}
+
+.why-text h1 {
+    font-weight: 800;
+    font-size: clamp(60px, 3.5vw, 90px);
+    margin-top: clamp(25px, 2vw, 50px);
+}
+
+.why-text p {
+    font-weight: 500;
+    font-size: clamp(19px, 1.33vw, 33px);
+    margin-top: clamp(13px, 1vw, 25px);
+    max-width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+    line-height: 1.25;
+}
+
+.why-circle {
+    margin-top: clamp(13px, 1vw, 25px);
+    align-self: center;
+    width: 33vw;
+    min-width: 300px;
+}

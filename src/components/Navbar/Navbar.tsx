@@ -25,7 +25,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ scrollToSection, openMenu }) => {
     // Hamburger on screens below 1000px:
-    const isMobile = useMediaQuery({ query: '(max-width: 950px)' });
+    const isMobile = useMediaQuery({ query: '(max-width: 850px)' });
 
     const defaultMenu: MenuItem[] = [
         { key: 'home', label: 'Home', icon: HomeIcon },
@@ -55,8 +55,8 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection, openMenu }) => {
         }
     };
 
-    const path1 = 'M500,49.5 L1273,49.5';
-    const path2 = 'M2044,49.5 L1273,49.5';
+    // const path1 = 'M500,49.5 L1273,49.5';
+    // const path2 = 'M2044,49.5 L1273,49.5';
 
     return (
         <nav className={`navbar`}>
@@ -152,7 +152,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection, openMenu }) => {
                                 <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
                             </linearGradient>
                         </defs>
-
+                        {/* 
                         <path
                             className="shape"
                             d={path1}
@@ -167,6 +167,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection, openMenu }) => {
                             strokeWidth="1"
                             fill="none"
                         />
+                        */}
                     </svg>
                 </div>
             </div>

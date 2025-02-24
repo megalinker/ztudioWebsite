@@ -1,0 +1,256 @@
+.rings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.ellipse-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.ellipse-wrapper.reverse .bubble {
+    animation-direction: reverse;
+}
+
+
+.bubble {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: moveBubble 8s linear infinite;
+    z-index: 2;
+}
+
+.bubble-top {
+    animation-delay: 0s;
+}
+
+.bubble-right {
+    animation-delay: -2s;
+}
+
+.bubble-bottom {
+    animation-delay: -4s;
+}
+
+.bubble-left {
+    animation-delay: -6s;
+}
+
+@keyframes moveBubble {
+
+    /* --- Top to Right (0% to 25%) --- */
+    0% {
+        top: -11%;
+        left: 50%;
+    }
+
+    2.5% {
+        top: -10.54%;
+        left: 56.88%;
+    }
+
+    5% {
+        top: -9.19%;
+        left: 63.60%;
+    }
+
+    7.5% {
+        top: -6.97%;
+        left: 69.98%;
+    }
+
+    10% {
+        top: -3.93%;
+        left: 75.86%;
+    }
+
+    12.5% {
+        top: -0.19%;
+        left: 81.11%;
+    }
+
+    15% {
+        top: 4.26%;
+        left: 85.60%;
+    }
+
+    17.5% {
+        top: 9.20%;
+        left: 89.20%;
+    }
+
+    20% {
+        top: 14.57%;
+        left: 91.85%;
+    }
+
+    22.5% {
+        top: 20.21%;
+        left: 93.46%;
+    }
+
+    25% {
+        top: 26%;
+        left: 94%;
+    }
+
+    /* --- Right to Bottom (25% to 50%) --- */
+    27.5% {
+        top: 31.79%;
+        left: 93.46%;
+    }
+
+    30% {
+        top: 37.43%;
+        left: 91.85%;
+    }
+
+    32.5% {
+        top: 42.80%;
+        left: 89.20%;
+    }
+
+    35% {
+        top: 47.74%;
+        left: 85.60%;
+    }
+
+    37.5% {
+        top: 52.19%;
+        left: 81.11%;
+    }
+
+    40% {
+        top: 55.93%;
+        left: 75.86%;
+    }
+
+    42.5% {
+        top: 58.97%;
+        left: 69.98%;
+    }
+
+    45% {
+        top: 61.19%;
+        left: 63.60%;
+    }
+
+    47.5% {
+        top: 62.54%;
+        left: 56.88%;
+    }
+
+    50% {
+        top: 63%;
+        left: 50%;
+    }
+
+    /* --- Bottom to Left (50% to 75%) --- */
+    52.5% {
+        top: 62.54%;
+        left: 43.12%;
+    }
+
+    55% {
+        top: 61.19%;
+        left: 36.40%;
+    }
+
+    57.5% {
+        top: 58.97%;
+        left: 30.02%;
+    }
+
+    60% {
+        top: 55.93%;
+        left: 24.14%;
+    }
+
+    62.5% {
+        top: 52.19%;
+        left: 18.89%;
+    }
+
+    65% {
+        top: 47.74%;
+        left: 14.40%;
+    }
+
+    67.5% {
+        top: 42.80%;
+        left: 10.80%;
+    }
+
+    70% {
+        top: 37.43%;
+        left: 8.15%;
+    }
+
+    72.5% {
+        top: 31.79%;
+        left: 6.54%;
+    }
+
+    75% {
+        top: 26%;
+        left: 6%;
+    }
+
+    /* --- Left to Top (75% to 100%) --- */
+    77.5% {
+        top: 20.21%;
+        left: 6.54%;
+    }
+
+    80% {
+        top: 14.57%;
+        left: 8.15%;
+    }
+
+    82.5% {
+        top: 9.20%;
+        left: 10.80%;
+    }
+
+    85% {
+        top: 4.26%;
+        left: 14.40%;
+    }
+
+    87.5% {
+        top: -0.19%;
+        left: 18.89%;
+    }
+
+    90% {
+        top: -3.93%;
+        left: 24.14%;
+    }
+
+    92.5% {
+        top: -6.97%;
+        left: 30.02%;
+    }
+
+    95% {
+        top: -9.19%;
+        left: 36.40%;
+    }
+
+    97.5% {
+        top: -10.54%;
+        left: 43.12%;
+    }
+
+    100% {
+        top: -11%;
+        left: 50%;
+    }
+}
+
+.ellipse-container {
+    position: relative;
+    z-index: 1;
+}
