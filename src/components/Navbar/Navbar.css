@@ -120,10 +120,6 @@
     margin-left: auto;
 }
 
-.navbar-preregister-button:hover {
-    background-color: rgb(36, 94, 245);
-}
-
 @media screen and (max-width:1200px) {
 
     .navbar-container {
@@ -143,7 +139,7 @@
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
     .navbar-container {
         height: 75px;
     }

@@ -1,0 +1,227 @@
+.contact-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 0;
+    margin-bottom: 20px;
+}
+
+.contact-text h1 {
+    font-weight: 800;
+    font-size: clamp(35px, 3.25vw, 90px);
+    margin-top: clamp(25px, 2vw, 50px);
+    line-height: clamp(40px, 3.5vw, 90px);
+}
+
+.contact-buttons-grid {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contact-button {
+    position: relative;
+    background: rgba(66, 66, 66, 0.33);
+    border: none;
+    padding: clamp(14px, 0.75vw, 20px);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    font-size: clamp(14px, 1vw, 24px);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 1);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+}
+
+.contact-button.active {
+    background: #88888833;
+}
+
+.contact-button.active::before {
+    content: "";
+    position: absolute;
+    left: 20%;
+    bottom: -2px;
+    border-radius: inherit;
+    background: radial-gradient(circle, #2BC9EC, rgba(43, 201, 236, 0));
+    pointer-events: none;
+    z-index: -1;
+    height: 5%;
+    width: 60%;
+    transition: all 0.3s ease;
+}
+
+.contact-buttons-grid> :nth-last-child(1):nth-child(3n+1) {
+    grid-column: 2;
+}
+
+.contact-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 0.75vw, 20px);
+    width: clamp(350px, 55vw, 1400px);
+    margin-top: clamp(50px, 2vw, 100px);
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #999;
+}
+
+
+.input-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: clamp(135px, 6vw, 150px);
+    border: 1.5px solid transparent;
+    border-radius: 50px;
+    background-image:
+        linear-gradient(#111, #111),
+        linear-gradient(90deg, #fff, #fff, #fff);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    pointer-events: none;
+    transition: background-image 0.3s ease;
+}
+
+.iconC {
+    margin-right: 8px;
+}
+
+.input-icon.valid {
+    background-image:
+        linear-gradient(#111, #111),
+        linear-gradient(90deg, #E14E87, #E8B125, #2BC9EC);
+}
+
+.input-group input,
+.input-group textarea {
+    background: rgba(0, 0, 0, 0.33);
+    border: 1px solid #fff;
+    border-radius: 50px;
+    padding-left: clamp(150px, 6.75vw, 175px);
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(15px, 0.85vw, 20px);
+    align-content: center;
+    height: clamp(50px, 2.33vw, 60px);
+    color: #fff;
+    width: 100%;
+    outline: none;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 50px;
+}
+
+.input-group textarea,
+.input-group input {
+    box-sizing: border-box;
+}
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(350px, 55vw, 55vw);
+    margin: 20px auto;
+    align-self: center;
+}
+
+.or-divider .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #fff;
+}
+
+.or-divider .or-text {
+    margin: 0 10px;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(15px, 0.85vw, 20px);
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.icon-row a img {
+    transition: filter 0.3s ease;
+}
+
+.icon-row a:hover img {
+    filter: invert(54%) sepia(37%) saturate(6511%) hue-rotate(320deg) brightness(97%) contrast(94%);
+}
+
+
+.contactIcon:hover {
+    color: #E14E87;
+}
+
+.submitButton {
+    width: 350px;
+    background-color: #fff;
+    color: black;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 20px;
+    align-self: center;
+    margin-top: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    border-width: 0;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #ccc;
+}
+
+@media (max-width: 1000px) {
+    .contact-buttons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-buttons-grid> :nth-last-child(1):nth-child(2n+1) {
+        grid-column: 1 / 3;
+        justify-self: center;
+        width: 50%;
+    }
+
+    .input-icon {
+        width: 65px;
+    }
+
+    .iconC {
+        margin-right: 0px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        padding-left: 80px;
+    }
+}

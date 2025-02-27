@@ -1,6 +1,7 @@
 // Stars.jsx
 import React, { useEffect, useState } from 'react';
 import styles from './Stars.module.scss';
+import { useMediaQuery } from 'react-responsive';
 
 interface Star {
     id: string;
@@ -15,69 +16,68 @@ interface Star {
 
 const Stars = () => {
     const [stars, setStars] = useState<Star[]>([]);
+    const [pageHeight, setPageHeight] = useState(window.innerHeight);
+    const isMobile = useMediaQuery({ query: '(max-width: 1000px)' });
 
     useEffect(() => {
+        // Function to set current page height
+        const updateHeight = () => {
+            const appEl = document.querySelector('.App');
+            if (!appEl) return;
+            const height = appEl.scrollHeight;
+            setPageHeight(height);
+        };
+
+        // Generate stars once
         const generateStars = () => {
-            const starCount = 100; // Total number of stars
-            const gridSize = 33; // Minimum distance between stars in pixels
-            const starsArray = [];
+            const starCount = isMobile ? 150 : 500;
+            const gridSize = 33;
             const windowWidth = window.innerWidth;
-            const windowHeight = window.innerHeight;
+
+            // Use our pageHeight instead of window.innerHeight
+            const windowHeight = pageHeight;
             const cols = Math.floor(windowWidth / gridSize);
             const rows = Math.floor(windowHeight / gridSize);
 
             const colors = ['#ffffff', '#E14E87', '#E8B125', '#2BC9EC'];
-
+            const newStars = [];
 
             for (let i = 0; i < starCount; i++) {
                 const col = Math.floor(Math.random() * cols);
                 const row = Math.floor(Math.random() * rows);
-                const key = `${col}-${row}-${i}`;
 
-                // Calculate position within the grid cell with some randomness
-                const left = (col * gridSize) + Math.random() * (gridSize - 10); // 10px padding
+                const left = (col * gridSize) + Math.random() * (gridSize - 10);
                 const top = (row * gridSize) + Math.random() * (gridSize - 10);
-                const color = colors[Math.floor(Math.random() * colors.length)];
 
-                const clampedLeft = Math.min(left, windowWidth - 10);
-                const clampedTop = Math.min(top, windowHeight - 10);
-
-                starsArray.push({
-                    id: key,
-                    left: clampedLeft,
-                    top: clampedTop,
+                newStars.push({
+                    id: `${col}-${row}-${i}`,
+                    left,
+                    top,
+                    color: colors[Math.floor(Math.random() * colors.length)],
                     animationDelay: `${Math.random() * 20}s`,
                     animationDuration: `${Math.random() * 5 + 5}s`,
-                    opacity: Math.random() * 0.5 + 0.5, // Opacity between 0.5 and 1
-                    scale: Math.random() * 0.5 + 0.5, // Scale between 0.5 and 1
-                    color,
+                    opacity: Math.random() * 0.5 + 0.5,
+                    scale: Math.random() * 0.5 + 0.5,
                 });
             }
-
-            setStars(starsArray);
+            setStars(newStars);
         };
 
+        // Generate once on mount + update page height
+        updateHeight();
         generateStars();
 
-        let resizeTimeout: ReturnType<typeof setTimeout>;
-        const handleResize = () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(() => {
-                generateStars();
-            }, 500); // Debounce delay
-        };
-
-        window.addEventListener('resize', handleResize);
+        window.addEventListener('resize', updateHeight);
+        window.addEventListener('scroll', updateHeight);
 
         return () => {
-            window.removeEventListener('resize', handleResize);
-            clearTimeout(resizeTimeout);
+            window.removeEventListener('resize', updateHeight);
+            window.removeEventListener('scroll', updateHeight);
         };
-
-    }, []);
+    }, [pageHeight]);
 
     return (
-        <div className={styles.Stars}>
+        <div className={styles.Stars} style={{ height: pageHeight }}>
             {stars.map(star => (
                 <div
                     key={star.id}

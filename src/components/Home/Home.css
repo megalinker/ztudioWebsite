@@ -10,11 +10,17 @@
     flex-direction: column;
     text-align: start;
     line-height: 0;
+    align-items: start;
+}
+
+.home-text h1.typewriter::after {
+    content: "You name it,";
+    visibility: hidden;
 }
 
 .home-text h1 {
     font-weight: 800;
-    font-size: clamp(60px, 3.5vw, 90px);
+    font-size: clamp(50px, 3.5vw, 90px);
     margin-top: clamp(25px, 2vw, 50px);
 }
 
@@ -32,10 +38,14 @@
     margin-top: 3vw;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
     .home-container {
         flex-direction: column;
         gap: 15vh;
         margin-top: 15vh;
+    }
+
+    .home-text {
+        align-items: center;
     }
 }

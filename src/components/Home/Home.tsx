@@ -1,17 +1,52 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
-import AnimatedButtonComponent from '../AnimatedButtonComponent/AnimatedButtonComponent';
+import AnimatedButtonComponent from '../Elements/AnimatedButtonComponent/AnimatedButtonComponent';
 import Rings from '../Rings/Rings';
 
 const Home: React.FC = () => {
 
+    const fullText1 = "You name it,";
+    const fullText2 = "we build it";
+    const fullText3 = "Trusted by market leaders";
+
+    const [text1, setText1] = useState("");
+    const [text2, setText2] = useState("");
+    const [text3, setText3] = useState("");
+
+    const typeText = (
+        fullText: string,
+        setText: React.Dispatch<React.SetStateAction<string>>,
+        speed = 0
+    ) => {
+        return new Promise<void>((resolve) => {
+            let index = 0;
+            const interval = setInterval(() => {
+                index++;
+                setText(fullText.slice(0, index));
+                if (index === fullText.length) {
+                    clearInterval(interval);
+                    resolve();
+                }
+            }, speed);
+        });
+    };
+
+    useEffect(() => {
+        const startTypewriter = async () => {
+            await typeText(fullText1, setText1, 75);
+            await typeText(fullText2, setText2, 75);
+            await typeText(fullText3, setText3, 75);
+        };
+
+        startTypewriter();
+    }, []);
 
     return (
         <div className="home-container">
             <div className="home-text">
-                <h1>You name it,</h1>
-                <h1 className="home-pink">we build it</h1>
-                <p>Trusted by market leaders</p>
+                <h1>{text1}</h1>
+                <h1 className="home-pink">{text2}</h1>
+                <p>{text3}</p>
                 <div className="home-button">
                     <AnimatedButtonComponent>Start Building</AnimatedButtonComponent>
                 </div>

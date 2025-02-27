@@ -1,10 +1,16 @@
 import React from 'react';
 
 const EllipseHorizontal: React.FC = () => (
+
     <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 598.7 236.1"
         xmlSpace="preserve"
+        style={{
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
+            clipPath: 'ellipse(55% 50% at 50% 50%)',
+        }}
     >
         <defs>
             <linearGradient

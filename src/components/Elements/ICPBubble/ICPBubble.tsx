@@ -15,7 +15,7 @@ const ICPBubble: React.FC<ICPBubbleProps> = ({ imageSrc, minSize, preferredSize,
     const offset = (baseSize - imageSize) / 2;
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: `clamp(${minSize}, ${preferredSize}, ${maxSize})` }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: `clamp(${minSize}, ${preferredSize}, ${maxSize})`, backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)', borderRadius: '50px', }}>
             <svg
                 id="Circulito"
                 xmlns="http://www.w3.org/2000/svg"

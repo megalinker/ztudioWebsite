@@ -1,10 +1,50 @@
 #root {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  height: 100%
 }
 
 .Section {
-  margin-top: 16vw;
+  margin-top: 17vw;
+}
+
+.SectionB {
+  margin-top: 10vw;
+}
+
+.SectionC {
+  margin-top: 4vw;
+  position: relative;
+}
+
+.SectionD {
+  position: relative;
+}
+
+.SectionF {
+  overflow-x: clip;
+  margin-top: 15vw;
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  height: calc(100vw * 539 / 1949);
+}
+
+.SectionC::before {
+  content: "";
+  position: absolute;
+  top: clamp(50px, 2.5vw, 6.5px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 50vw;
+  min-height: 800px;
+  background: url('/assets/contactLines.svg') no-repeat top center;
+  background-size: cover;
+  z-index: -1;
+}
+
+h1 {
+  user-select: none;
 }

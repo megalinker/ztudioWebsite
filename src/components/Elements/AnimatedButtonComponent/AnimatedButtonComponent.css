@@ -1,0 +1,88 @@
+:root {
+    --conic-gradient: conic-gradient(#2BC9EC,
+            black,
+            black,
+            #2BC9EC,
+            black,
+            black,
+            #2BC9EC);
+}
+
+/* Container holds the spinning gradient border */
+.animated-button-container {
+    position: relative;
+    width: 12em;
+    height: 3em;
+    border-radius: 50px;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Spinning gradient pseudo-element (always spinning) */
+.animated-button-container::before {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 400%;
+    background: var(--conic-gradient);
+    animation: spin 4s infinite linear;
+    top: -140%;
+    left: -5%;
+}
+
+/* Masking pseudo-element to cover the inner area */
+.animated-button-container::after {
+    content: '';
+    position: absolute;
+    width: 98%;
+    height: 94%;
+    background-color: black;
+    border-radius: 50px;
+    z-index: 1;
+}
+
+/* Scale container on hover */
+.animated-button-container:hover {
+    transform: scale(1.1);
+}
+
+/* The button itself is transparent so the mask shows */
+.animated-button {
+    position: relative;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: 500;
+    z-index: 2;
+}
+
+/* Keyframes for the spinning gradient */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1300px) {
+    .animated-button {
+        font-size: 0.85em;
+    }
+
+    .animated-button-container {
+        width: 12em;
+        height: 2.75em;
+    }
+
+    .animated-button-container::before {
+        width: 110%;
+        height: 450%;
+        top: -180%;
+    }
+
+}

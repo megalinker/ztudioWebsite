@@ -1,3 +1,26 @@
+.why-bg-wrapper {
+    position: relative;
+    max-width: 67vw;
+    min-width: 350px;
+    margin: 0 auto;
+}
+
+.why-bg-wrapper p {
+    position: relative;
+    z-index: 1;
+}
+
+.background-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: auto;
+    z-index: -10;
+    filter: blur(100px);
+}
+
 .why-container {
     display: flex;
     flex-direction: column;
@@ -13,7 +36,7 @@
 
 .why-text h1 {
     font-weight: 800;
-    font-size: clamp(60px, 3.5vw, 90px);
+    font-size: clamp(35px, 3.25vw, 90px);
     margin-top: clamp(25px, 2vw, 50px);
 }
 
@@ -21,7 +44,8 @@
     font-weight: 500;
     font-size: clamp(19px, 1.33vw, 33px);
     margin-top: clamp(13px, 1vw, 25px);
-    max-width: 75vw;
+    max-width: 67vw;
+    min-width: 350px;
     margin-left: auto;
     margin-right: auto;
     word-wrap: break-word;
@@ -29,8 +53,292 @@
 }
 
 .why-circle {
-    margin-top: clamp(13px, 1vw, 25px);
+    margin-top: clamp(25px, 2vw, 50px);
     align-self: center;
-    width: 33vw;
+    width: 25vw;
     min-width: 300px;
+}
+
+.why-panas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -100px;
+}
+
+.ricardo-group,
+.sagar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ricardo-buttons,
+.sagar-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.ricardo-buttons a,
+.sagar-buttons a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.ricardo-group p.ricardo-text {
+    margin-top: 20px;
+    font-size: clamp(15px, 0.85vw, 20px);
+    text-align: start;
+    padding-left: 0;
+    transition: padding-left 1.5s ease;
+    box-sizing: border-box;
+    margin-left: 15px;
+}
+
+.ricardo-group.revealed p.ricardo-text {
+    padding-left: clamp(115px, 8.25vw, 210px);
+}
+
+.sagar-group p.sagar-text {
+    margin-top: 20px;
+    font-size: clamp(15px, 0.85vw, 20px);
+    text-align: end;
+    padding-right: 0;
+    transition: padding-right 1.5s ease;
+    box-sizing: border-box;
+    margin-right: 15px;
+}
+
+.sagar-group.revealed p.sagar-text {
+    padding-right: clamp(115px, 8.5vw, 210px);
+}
+
+.ricardo-group.revealed .subpana11 {
+    transition-delay: 0s;
+}
+
+.ricardo-group.revealed .subpana12 {
+    transition-delay: 0.5s;
+}
+
+.ricardo-group.revealed .subpana13 {
+    transition-delay: 1s;
+}
+
+.sagar-group.revealed .subpana21 {
+    transition-delay: 0s;
+}
+
+.sagar-group.revealed .subpana22 {
+    transition-delay: 0.5s;
+}
+
+.sagar-group.revealed .subpana23 {
+    transition-delay: 1s;
+}
+
+
+.ricardo-group.revealed .subpana,
+.sagar-group.revealed .subpana {
+    opacity: 1;
+}
+
+.why-panas.fade-out .ricardo-group .subpana13 {
+    transition-delay: 0s;
+    opacity: 0;
+}
+
+.why-panas.fade-out .ricardo-group .subpana12 {
+    transition-delay: 0.5s;
+    opacity: 0;
+}
+
+.why-panas.fade-out .ricardo-group .subpana11 {
+    transition-delay: 1s;
+    opacity: 0;
+}
+
+.why-panas.fade-out .sagar-group .subpana23 {
+    transition-delay: 0s;
+    opacity: 0;
+}
+
+.why-panas.fade-out .sagar-group .subpana22 {
+    transition-delay: 0.5s;
+    opacity: 0;
+}
+
+.why-panas.fade-out .sagar-group .subpana21 {
+    transition-delay: 1s;
+    opacity: 0;
+}
+
+.ricardo-group .subpana11 .icon {
+    margin-left: clamp(50px, 2.75vw, 275px);
+}
+
+.sagar-group .icon {
+    margin-left: clamp(-265px, -2.75vw, -50px);
+}
+
+.ricardo-group .buttonpana {
+    position: relative;
+    z-index: 4;
+}
+
+.ricardo-group .subpana11 {
+    position: relative;
+    margin-left: clamp(-150px, -3.5vw, -60px);
+    z-index: 3;
+}
+
+
+.ricardo-group .subpana12 {
+    position: relative;
+    margin-left: clamp(-290px, -8.5vw, -130px);
+    z-index: 2;
+}
+
+.ricardo-group .subpana13 {
+    position: relative;
+    margin-left: clamp(-290px, -8.5vw, -130px);
+    z-index: 1;
+}
+
+.panas-middle-circle {
+    width: clamp(60px, 4vw, 100px);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.panas-middle-circle:hover {
+    transform: scale(1.1);
+}
+
+.sagar-group .buttonpana {
+    position: relative;
+    z-index: 4;
+}
+
+.sagar-group .subpana21 {
+    position: relative;
+    margin-right: clamp(-150px, -3.5vw, -60px);
+    z-index: 3;
+}
+
+.sagar-group .subpana22 {
+    position: relative;
+    margin-right: clamp(-290px, -8.5vw, -130px);
+    z-index: 2;
+}
+
+.sagar-group .subpana23 {
+    position: relative;
+    margin-right: clamp(-290px, -8.5vw, -130px);
+    z-index: 1;
+}
+
+.buttonpana {
+    width: clamp(150px, 10vw, 250px);
+    height: clamp(60px, 4vw, 100px);
+    border-radius: 50px;
+    overflow: hidden;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+.subpana {
+    background-color: #111111;
+    border: 2px #fff solid;
+    overflow: hidden;
+    width: clamp(180px, 12vw, 300px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.subpana::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #111111, rgba(43, 201, 236, 0.2));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.subpana:hover::before {
+    opacity: 1;
+}
+
+.subpana22,
+.subpana23 {
+    justify-content: start;
+}
+
+.subpana12,
+.subpana13 {
+    justify-content: end;
+}
+
+.icon,
+.icon-left {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+.icon-left {
+    display: inline-block;
+    vertical-align: middle;
+    padding: clamp(18px, 1.5vw, 35px);
+}
+
+.subpana .icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.subpana .text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: clamp(15px, 1vw, 25px);
+}
+
+@media screen and (max-width: 1000px) {
+    .why-panas {
+        flex-direction: column;
+        gap: 33px;
+        width: 100vw;
+        padding: 0 7px;
+        box-sizing: border-box;
+    }
+
+    .panas-middle-circle {
+        align-self: center;
+        margin-top: -20px;
+    }
+
+    .ricardo-group {
+        align-self: start;
+    }
+
+    .sagar-group {
+        align-self: flex-end;
+    }
 }

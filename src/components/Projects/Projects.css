@@ -1,0 +1,30 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.projects-container h1 {
+    font-weight: 800;
+    font-size: clamp(35px, 3.25vw, 90px);
+}
+
+.view-project-button {
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+}
+
+.view-project-button:hover {
+    transform: scale(1.1);
+    background-color: #eee;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

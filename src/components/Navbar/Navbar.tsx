@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import { useMediaQuery } from 'react-responsive';
 import ZtudioLogo from '/assets/ztudioLogo.svg';
@@ -21,37 +21,38 @@ interface MenuItem {
 interface NavbarProps {
     scrollToSection?: (section: string) => void;
     openMenu?: () => void;
+    activeSection: string;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ scrollToSection, openMenu }) => {
+const Navbar: React.FC<NavbarProps> = ({ scrollToSection, openMenu, activeSection }) => {
     // Hamburger on screens below 1000px:
-    const isMobile = useMediaQuery({ query: '(max-width: 850px)' });
+    const isMobile = useMediaQuery({ query: '(max-width: 1000px)' });
 
     const defaultMenu: MenuItem[] = [
         { key: 'home', label: 'Home', icon: HomeIcon },
         { key: 'why', label: 'Why?', icon: WhyIcon },
         { key: 'services', label: 'Services', icon: ServicesIcon },
+        { key: 'team', label: 'Team', icon: ServicesIcon },
         { key: 'projects', label: 'Projects', icon: ProjectsIcon },
         { key: 'contact', label: 'Contact', icon: ContactIcon },
     ];
 
     const [menuItems, setMenuItems] = useState<MenuItem[]>(defaultMenu);
-    const [activeSection, setActiveSection] = useState('home');
+
+    useEffect(() => {
+        const index = menuItems.findIndex(item => item.key === activeSection);
+        if (index > 0) {
+            const newOrder = [
+                ...menuItems.slice(index),
+                ...menuItems.slice(0, index)
+            ];
+            setMenuItems(newOrder);
+        }
+    }, [activeSection]);
 
     const handleButtonClick = (key: string) => {
-        if (key !== activeSection) {
-            const index = menuItems.findIndex(item => item.key === key);
-            if (index > 0) {
-                const newOrder = [
-                    ...menuItems.slice(index),
-                    ...menuItems.slice(0, index)
-                ];
-                setMenuItems(newOrder);
-            }
-            setActiveSection(key);
-            if (scrollToSection) {
-                scrollToSection(key);
-            }
+        if (scrollToSection) {
+            scrollToSection(key);
         }
     };
 
