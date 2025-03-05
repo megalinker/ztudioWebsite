@@ -13,6 +13,13 @@
     },
     "security_policy": "standard"
   },
+    {
+    "match": "**/*.svg",
+    "headers": {
+      "Cache-Control": "public, max-age=31536000, immutable"
+    },
+    "security_policy": "standard"
+  },
   {
     "match": "**/*.mp4",
     "headers": {
@@ -27,6 +34,27 @@
     },
     "security_policy": "standard"
   },
+  {
+  "match": "**/*.woff",
+  "headers": {
+    "Cache-Control": "public, max-age=31536000, immutable"
+  },
+  "security_policy": "standard"
+},
+{
+  "match": "**/*.woff2",
+  "headers": {
+    "Cache-Control": "public, max-age=31536000, immutable"
+  },
+  "security_policy": "standard"
+},
+{
+  "match": "**/*.ico",
+  "headers": {
+    "Cache-Control": "public, max-age=31536000, immutable"
+  },
+  "security_policy": "standard"
+},
   {
     "match": "**/*",
     "security_policy": "standard"
