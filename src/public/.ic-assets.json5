@@ -1,6 +1,34 @@
 [
   {
-    match: '**/*',
-    security_policy: 'standard',
+    "match": "**/*.webp",
+    "headers": {
+      "Cache-Control": "public, max-age=31536000, immutable"
+    },
+    "security_policy": "standard"
   },
+  {
+    "match": "**/*.png",
+    "headers": {
+      "Cache-Control": "public, max-age=31536000, immutable"
+    },
+    "security_policy": "standard"
+  },
+  {
+    "match": "**/*.mp4",
+    "headers": {
+      "Cache-Control": "public, max-age=31536000, immutable"
+    },
+    "security_policy": "standard"
+  },
+  {
+    "match": "**/*.webm",
+    "headers": {
+      "Cache-Control": "public, max-age=31536000, immutable"
+    },
+    "security_policy": "standard"
+  },
+  {
+    "match": "**/*",
+    "security_policy": "standard"
+  }
 ]
