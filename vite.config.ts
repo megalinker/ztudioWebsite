@@ -36,6 +36,10 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
+          src: path.resolve(__dirname, 'src/assets*'),
+          dest: '.'
+        },
+        {
           src: path.resolve(__dirname, `src/.well-known`),
           dest: '.'
         },
