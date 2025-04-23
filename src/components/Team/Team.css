@@ -1,194 +1,142 @@
-.team-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1vw;
-}
-
-.team-text {
-    display: flex;
-    flex-direction: column;
+.team-section {
     text-align: center;
-    line-height: 0;
-    margin-bottom: 20px;
+    margin-top: max(50px, 4vw);
+    margin-bottom: max(50px, 4vw);
+    padding-left: 7vw;
+    padding-right: 7vw;
 }
 
-.team-text h1 {
+.team-section h1 {
     font-weight: 800;
     font-size: clamp(35px, 3.25vw, 90px);
     margin-top: clamp(25px, 2vw, 50px);
 }
 
-.teamRow {
+.team-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
-.teamGroup {
+.team-card {
+    position: relative;
+    width: 300px;
+    padding: 24px;
+    padding-bottom: 80px;
+    text-align: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+        rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
+        rgba(0, 0, 0, 0.14) 0px 1px 1px 0px,
+        rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+}
+
+.team-card img.profile {
+    margin-top: 10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.team-card-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: clamp(300px, 20vw, 500px);
 }
 
-.teamRow,
-.teamDescription {
-    width: 100%;
-}
-
-.teamMember {
-    width: clamp(150px, 10vw, 250px);
-    height: clamp(60px, 4vw, 100px);
-    border-radius: 50px;
-    overflow: hidden;
-    background-size: 100% auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
-    cursor: pointer;
-    z-index: 2;
-    text-decoration: none;
-    color: inherit;
-}
-
-.teamDescription {
-    position: relative;
-    box-sizing: border-box;
-    background-color: #111111;
-    border-radius: 300px;
-    border: 2px #fff solid;
-    overflow: hidden;
+.header-row {
     display: flex;
-    align-items: start;
-    justify-content: center;
-    height: clamp(135px, 9vw, 225px);
-    margin-top: clamp(-100px, -4vw, -60px);
-    z-index: 0;
-    padding-left: 25px;
-    padding-right: 25px;
-    transform: scaleY(0);
-    opacity: 0;
-    transform-origin: top;
-    transition: transform 0.5s ease, opacity 0.5s ease, border-radius 0.5s ease;
-}
-
-.teamGroup:hover .teamDescription {
-    transform: scaleY(1);
-    opacity: 1;
-    border-radius: clamp(30px, 2vw, 50px);
-}
-
-.teamDescription .text {
-    margin-top: clamp(68px, 4.75vw, 120px);
-    font-size: clamp(14px, 0.78vw, 20px);
-    line-height: clamp(16px, 1vw, 24px);
-}
-
-
-.teamMemberAdd {
-    position: relative;
-    background-color: #111111;
-    border: 2px #fff solid;
-    overflow: hidden;
-    width: clamp(240px, 16vw, 400px);
-    display: flex;
+    gap: 8px;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.5s ease;
-    z-index: 1;
-    margin-left: clamp(-150px, -3.5vw, -40px);
+    flex-direction: column;
 }
 
-.teamMemberAdd::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, #111111, rgba(43, 201, 236, 0.2));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 0;
+.team-card h4 {
+    margin: 0.5em 0 0.25em;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
-.teamMemberAdd:hover::before {
-    opacity: 1;
+.team-card h5 {
+    margin: 0.25em 0 0.5em;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(225, 68, 146);
 }
 
-.teamMemberAdd .icon {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 8px;
-    z-index: 1;
-    line-height: 0;
-    margin-left: clamp(30px, 3.75vw, 100px);
-}
-
-.teamMemberAdd .text {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: clamp(15px, 1vw, 25px);
-    z-index: 1;
-}
-
-.marquee {
+.description {
+    margin-top: 16px;
+    color: #BBB;
+    font-size: 0.9em;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    position: relative;
-    width: 100%;
-    min-height: clamp(150px, 9vw, 225px);
 }
 
-.marquee-inner {
+.social-row {
     position: absolute;
-    top: 0;
-    left: 0;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
     display: flex;
-    animation: marquee 20s linear infinite;
+    gap: 15px;
 }
 
-.marquee-content {
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 2rem;
+.social-row a img {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease;
 }
 
-.marquee:hover .marquee-inner {
-    animation-play-state: paused;
+
+.social-row a:hover img {
+    filter: invert(54%) sepia(37%) saturate(6511%) hue-rotate(320deg) brightness(97%) contrast(94%);
 }
 
-.marquee.reverse:hover .marquee-inner {
-    animation-play-state: paused;
-}
-
-.marquee-title {
-    font-size: clamp(30px, 2vw, 50px);
-    font-weight: 800;
-    padding: 0 1rem;
-}
-
-.marquee.reverse .marquee-inner {
-    animation: marqueeReverse 20s linear infinite;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0%);
+@media (max-width: 1000px) {
+    .team-card {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%;
+        max-width: none;
+        padding-bottom: 24px;
     }
 
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-@keyframes marqueeReverse {
-    0% {
-        transform: translateX(-50%);
+    .team-card img.profile {
+        margin-right: 16px;
+        margin-bottom: 0;
+        flex-shrink: 0;
     }
 
-    100% {
-        transform: translateX(0%);
+    .team-card-content {
+        flex: 1;
+        text-align: left;
+    }
+
+    .header-row {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .description {
+        margin-top: 8px;
+    }
+
+    .social-row {
+        position: static;
+        transform: none;
+        justify-content: flex-end;
+        margin-top: 8px;
     }
 }

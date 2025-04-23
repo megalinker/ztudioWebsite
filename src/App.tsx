@@ -9,6 +9,7 @@ import Team from './components/Team/Team';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Projects from './components/Projects/Projects';
+import { persons } from './data/persons';
 
 interface SectionRefs {
   [key: string]: React.RefObject<HTMLDivElement>;
@@ -104,7 +105,7 @@ function App() {
         <Services />
       </div>
       <div className="SectionB" ref={sectionRefs.team}>
-        <Team />
+        <Team persons={persons} />
       </div>
       <div className="SectionD" ref={sectionRefs.projects}>
         <Projects />

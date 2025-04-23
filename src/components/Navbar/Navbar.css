@@ -48,7 +48,7 @@
 
 .navbar-text-background {
     background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.005) 0%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.005) 100%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.005) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(255, 255, 255, 0.005) 100%),
         rgba(255, 255, 255, 0.03);
     display: inline-block;
     border-radius: 50px;

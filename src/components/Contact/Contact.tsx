@@ -105,21 +105,21 @@ const Contact: React.FC = () => {
 
                 <div className="icon-row">
                     <a
-                        href="https://link1.example.com"
+                        href="https://www.linkedin.com/company/ztudioxyz"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <img src={XIcon} className="contactIcon" alt="Icon 1" />
                     </a>
                     <a
-                        href="https://link2.example.com"
+                        href="https://www.linkedin.com/company/ztudioxyz"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <img src={EmailIconC} className="contactIcon" alt="Icon 2" />
                     </a>
                     <a
-                        href="https://link3.example.com"
+                        href="https://www.linkedin.com/company/ztudioxyz"
                         target="_blank"
                         rel="noopener noreferrer"
                     >

@@ -1,162 +1,56 @@
 import React from 'react';
 import './Team.css';
-import RicardoButtonImage from '/assets/ICPeople/RicardoButtonImage.webp'
-import SagarButtonImage from '/assets/ICPeople/SagarButtonImage.webp'
-import XIcon from '/assets/SocialMediaIcons/XIcon.svg'
-import TeamMember from './TeamMember';
 
-const developersData = [
-    {
-        image: RicardoButtonImage,
-        icon: XIcon,
-        socialMediaHandle: '@capuzr',
-        socialMediaLink: 'https://x.com/capuzr',
-        description:
-            'Ricardo Ricardo Ricardo',
-    },
-    {
-        image: SagarButtonImage,
-        icon: XIcon,
-        socialMediaHandle: '@sagar',
-        socialMediaLink: 'https://x.com/sagar',
-        description:
-            'Sagar Sagar Sagar',
-    },
-    {
-        image: RicardoButtonImage,
-        icon: XIcon,
-        socialMediaHandle: '@megalinker',
-        socialMediaLink: 'https://x.com/dmegalinker',
-        description:
-            'Jesus Jesus Jesus Jesus Jesus Jesus Jesus Jesus Jesus Jesus Jesus Jesus',
-    },
-    {
-        image: SagarButtonImage,
-        icon: XIcon,
-        socialMediaHandle: '@darshan',
-        socialMediaLink: 'https://x.com/darshan',
-        description:
-            'Darshan Darshan Darshan',
-    },
-];
+import { Person } from '../../data/persons';
 
-const designersData = [
-    {
-        image: RicardoButtonImage,
-        icon: XIcon,
-        socialMediaHandle: '@dgranado',
-        socialMediaLink: 'https://x.com/dgranado.icp',
-        description:
-            'Daniel Daniel Daniel',
-    },
-];
+import xIcon from '/assets/SocialMediaIcons/XIcon.svg';
+import linkedinIcon from '/assets/SocialMediaIcons/LinkedInLogo.svg';
+import githubIcon from '/assets/SocialMediaIcons/GithubIcon.svg';
 
-const marketingData = [
-    {
-        image: RicardoButtonImage,
-        icon: XIcon,
-        socialMediaHandle: '@dgranado',
-        socialMediaLink: 'https://x.com/dgranado.icp',
-        description:
-            'Daniel Daniel Daniel',
-    },
-];
+interface TeamProps {
+    persons: Person[];
+}
 
-const Team: React.FC = () => {
-
+const Team: React.FC<TeamProps> = ({ persons }) => {
     return (
-        <div className="team-container">
-            <div className="team-text">
-                <h1>TEAM</h1>
-            </div>
-
-            <div className="marquee">
-                <div className="marquee-inner">
-                    <div className="marquee-content">
-                        <h1 className="marquee-title">DEVELOPERS</h1>
-                        {developersData.map((member, index) => (
-                            <TeamMember
-                                key={index}
-                                image={member.image}
-                                icon={member.icon}
-                                socialMediaHandle={member.socialMediaHandle}
-                                socialMediaLink={member.socialMediaLink}
-                                description={member.description}
-                            />
-                        ))}
-                        <h1 className="marquee-title">DEVELOPERS</h1>
-                        {developersData.map((member, index) => (
-                            <TeamMember
-                                key={`duplicate-${index}`}
-                                image={member.image}
-                                icon={member.icon}
-                                socialMediaHandle={member.socialMediaHandle}
-                                socialMediaLink={member.socialMediaLink}
-                                description={member.description}
-                            />
-                        ))}
+        <section className="team-section">
+            <h1>TEAM</h1>
+            <div className="team-container">
+                {persons.map(person => (
+                    <div key={person.id} className="team-card">
+                        <img
+                            src={person.imgSrc}
+                            alt={person.name}
+                            className="profile"
+                        />
+                        <div className="team-card-content">
+                            <div className="header-row">
+                                <h4>{person.name}</h4>
+                                <h5>{person.subtitle}</h5>
+                            </div>
+                            <p className="description">{person.description}</p>
+                            <div className="social-row">
+                                {person.twitter && (
+                                    <a href={person.twitter} target="_blank" rel="noopener noreferrer">
+                                        <img src={xIcon} alt="Twitter" />
+                                    </a>
+                                )}
+                                {person.linkedin && (
+                                    <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
+                                        <img src={linkedinIcon} alt="LinkedIn" />
+                                    </a>
+                                )}
+                                {person.github && (
+                                    <a href={person.github} target="_blank" rel="noopener noreferrer">
+                                        <img src={githubIcon} alt="GitHub" />
+                                    </a>
+                                )}
+                            </div>
+                        </div>
                     </div>
-                </div>
+                ))}
             </div>
-
-            <div className="marquee reverse">
-                <div className="marquee-inner">
-                    <div className="marquee-content">
-                        <h1 className="marquee-title">DESIGNERS</h1>
-                        {designersData.map((member, index) => (
-                            <TeamMember
-                                key={`des-${index}`}
-                                image={member.image}
-                                icon={member.icon}
-                                socialMediaHandle={member.socialMediaHandle}
-                                socialMediaLink={member.socialMediaLink}
-                                description={member.description}
-                            />
-                        ))}
-                        <h1 className="marquee-title">DESIGNERS</h1>
-                        {designersData.map((member, index) => (
-                            <TeamMember
-                                key={`des-duplicate-${index}`}
-                                image={member.image}
-                                icon={member.icon}
-                                socialMediaHandle={member.socialMediaHandle}
-                                socialMediaLink={member.socialMediaLink}
-                                description={member.description}
-                            />
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            <div className="marquee">
-                <div className="marquee-inner">
-                    <div className="marquee-content">
-                        <h1 className="marquee-title">MARKETING</h1>
-                        {marketingData.map((member, index) => (
-                            <TeamMember
-                                key={index}
-                                image={member.image}
-                                icon={member.icon}
-                                socialMediaHandle={member.socialMediaHandle}
-                                socialMediaLink={member.socialMediaLink}
-                                description={member.description}
-                            />
-                        ))}
-                        <h1 className="marquee-title">MARKETING</h1>
-                        {marketingData.map((member, index) => (
-                            <TeamMember
-                                key={`duplicate-${index}`}
-                                image={member.image}
-                                icon={member.icon}
-                                socialMediaHandle={member.socialMediaHandle}
-                                socialMediaLink={member.socialMediaLink}
-                                description={member.description}
-                            />
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
     );
 };
 

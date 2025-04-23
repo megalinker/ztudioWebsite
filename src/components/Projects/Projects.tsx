@@ -2164,24 +2164,22 @@ const Projects: React.FC = () => {
                 })}
             </svg>
 
-            {!activeProject && (
-                <img
-                    src={ZtudioIso}
-                    alt="Ztudio Logo"
-                    style={{
-                        position: 'absolute',
-                        left: '50%',
-                        top: '50%',
-                        transform: isMobile
-                            ? 'translate(-40%, calc(1vw + 10px))'
-                            : 'translate(-40%, 35%)',
-                        width: isMobile ? '8vw' : '4vw',
-                        transition: `opacity 400ms ease`,
-                        opacity: activeProject ? 0 : 1,
-                        pointerEvents: 'none',
-                    }}
-                />
-            )}
+            <img
+                src={ZtudioIso}
+                alt="Ztudio Logo"
+                style={{
+                    position: 'absolute',
+                    left: '50%',
+                    top: '50%',
+                    transform: isMobile
+                        ? 'translate(-40%, calc(1vw + 10px))'
+                        : 'translate(-40%, 35%)',
+                    width: isMobile ? '8vw' : '4vw',
+                    transition: `opacity 400ms ease`,
+                    opacity: activeProject ? 0 : 1,
+                    pointerEvents: 'none',
+                }}
+            />
 
             {activeProject && (
                 <div
