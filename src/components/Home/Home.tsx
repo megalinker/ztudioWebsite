@@ -3,7 +3,11 @@ import './Home.css';
 import AnimatedButtonComponent from '../Elements/AnimatedButtonComponent/AnimatedButtonComponent';
 import Rings from '../Rings/Rings';
 
-const Home: React.FC = () => {
+interface HomeProps {
+    scrollToSection: (section: 'home' | 'why' | 'services' | 'team' | 'projects' | 'contact') => void;
+}
+
+const Home: React.FC<HomeProps> = ({ scrollToSection }) => {
 
     const fullText1 = "You name it,";
     const fullText2 = "we build it";
@@ -48,7 +52,7 @@ const Home: React.FC = () => {
                 <h1 className="home-pink">{text2}</h1>
                 <p>{text3}</p>
                 <div className="home-button">
-                    <AnimatedButtonComponent>Start Building</AnimatedButtonComponent>
+                    <AnimatedButtonComponent onClick={() => scrollToSection('contact')}>Start Building</AnimatedButtonComponent>
                 </div>
             </div>
             <div className="home-animated-component">

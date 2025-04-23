@@ -47,16 +47,12 @@ function App() {
 
   const scrollToSection = (section: keyof SectionRefs) => {
     const ref = sectionRefs[section];
-    if (ref && ref.current) {
-      setIsManualScrolling(true);
-      const navbarHeight = 133;
-      const elementPosition = ref.current.offsetTop - navbarHeight;
-      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+    if (!ref.current) return;
 
-      setTimeout(() => {
-        setIsManualScrolling(false);
-      }, 500);
-    }
+    setIsManualScrolling(true);
+    ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    setTimeout(() => setIsManualScrolling(false), 600);
   };
 
   useEffect(() => {
@@ -99,7 +95,7 @@ function App() {
       {isMenuOpen && <MobileMenuComponent scrollToSection={scrollToSection} closeMenu={closeMenu} />}
 
       <div className="Section" ref={sectionRefs.home}>
-        <Home />
+        <Home scrollToSection={scrollToSection} />
       </div>
       <div className="Section" ref={sectionRefs.why}>
         <Why />
@@ -117,7 +113,7 @@ function App() {
         <Contact />
       </div>
       <div className="SectionB SectionF">
-        <Footer />
+        <Footer scrollToSection={scrollToSection} />
       </div>
     </div>
   );

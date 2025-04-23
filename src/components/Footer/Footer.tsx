@@ -6,7 +6,11 @@ import XIconB from '/assets/SocialMediaIcons/XIconB.svg'
 import EmailIconCB from '/assets/SocialMediaIcons/EmailIconCB.svg'
 import TelegramIconB from '/assets/SocialMediaIcons/TelegramIconB.svg'
 
-const Footer: React.FC = () => {
+interface FooterProps {
+    scrollToSection: (section: 'home' | 'why' | 'services' | 'team' | 'projects' | 'contact') => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
 
     const isKindOfMobile = useMediaQuery({ query: '(max-width: 1000px)' });
     const isMobile = useMediaQuery({ query: '(max-width: 750px)' });
@@ -151,7 +155,7 @@ const Footer: React.FC = () => {
                         left: '50%',
                         transform: 'translateX(-50%)'
                     }}>
-                        <AnimatedButtonComponent>Start Building</AnimatedButtonComponent>
+                        <AnimatedButtonComponent onClick={() => scrollToSection('contact')}                        >Start Building</AnimatedButtonComponent>
                     </div>
                 )}
                 {!isKindOfMobile && (
