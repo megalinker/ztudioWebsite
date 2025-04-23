@@ -19,7 +19,9 @@ import DOGMILogo from '/assets/projectLogos/DOGMILogo.webp'
 import OISLogo from '/assets/projectLogos/OISLogo.webp'
 import HelixLogo from '/assets/projectLogos/HelixLogo.webp'
 import PartnrshipLogo from '/assets/projectLogos/PartnrshipLogo.svg'
-
+import ModClubLogo from '/assets/projectLogos/ModClubLogo.webp'
+import AlfangoDBLogo from '/assets/projectLogos/AlfangoDBLogo.webp'
+import NodeMonitorLogo from '/assets/projectLogos/NodeMonitorLogo.png'
 
 import './Rings.css';
 
@@ -45,7 +47,10 @@ const Rings: React.FC = () => {
             DOGMILogo,
             OISLogo,
             HelixLogo,
-            PartnrshipLogo
+            PartnrshipLogo,
+            ModClubLogo,
+            AlfangoDBLogo,
+            NodeMonitorLogo
         ];
 
         const shuffleArray = (array: any[]) => {

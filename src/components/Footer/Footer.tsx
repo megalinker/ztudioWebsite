@@ -207,7 +207,7 @@ const Footer: React.FC = () => {
                     fontWeight: '700',
                     whiteSpace: 'nowrap',
                 }}>
-                    © 2024 Ztudio. All rights reserved
+                    © 2025 Ztudio. All rights reserved
                 </p>
             </div>
         </div >

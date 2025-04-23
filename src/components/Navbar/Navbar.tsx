@@ -91,17 +91,6 @@ const Navbar: React.FC<NavbarProps> = ({ scrollToSection, openMenu, activeSectio
                     </div>
                 )}
 
-                {/* Right: Brightness icon */}
-                {!isMobile && (
-                    <div className="navbar-right">
-                        <img
-                            src={BrightnessIcon}
-                            alt="Brightness Icon"
-                            className="navbar-brightness-icon"
-                        />
-                    </div>
-                )}
-
                 {/* Right: Hamburger menu (show only if mobile) */}
                 {isMobile && (
                     <button

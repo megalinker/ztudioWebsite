@@ -41,8 +41,8 @@
 @media screen and (max-width: 1000px) {
     .home-container {
         flex-direction: column;
-        gap: 15vh;
-        margin-top: 15vh;
+        gap: 15dvh;
+        margin-top: 15dvh;
     }
 
     .home-text {

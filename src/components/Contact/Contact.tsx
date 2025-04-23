@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
     return (
         <div className="contact-container" >
             <div className="contact-text">
-                <h1>HOW CAN WE DRIVE YOUR PROJECT'S SUCCESS?</h1>
+                <h1>LET'S GET IN TOUCH</h1>
             </div>
             <div className="contact-buttons-grid">
                 {buttonOptions.map((option, index) => (

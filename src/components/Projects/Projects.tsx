@@ -17,8 +17,11 @@ import DOGMILogo from '/assets/projectLogos/DOGMILogo.webp'
 import OISLogo from '/assets/projectLogos/OISLogo.webp'
 import HelixLogo from '/assets/projectLogos/HelixLogo.webp'
 import PartnrshipLogo from '/assets/projectLogos/PartnrshipLogo.svg'
-import ICPBubble from '../Elements/ICPBubble/ICPBubble';
+import ModClubLogo from '/assets/projectLogos/ModClubLogo.webp'
+import AlfangoDBLogo from '/assets/projectLogos/AlfangoDBLogo.webp'
+import NodeMonitorLogo from '/assets/projectLogos/NodeMonitorLogo.png'
 
+import ICPBubble from '../Elements/ICPBubble/ICPBubble';
 import ZtudioIso from '/assets/ztudioIso.svg'
 
 export interface ProjectData {
@@ -40,107 +43,111 @@ const projects: ProjectData[] = [
     {
         title: "DOGMI",
         description:
-            "We did bark and bark even more and even even even more woofs for DOGMI",
+            "Provided professional consulting and tokenomics strategies for DOGMI",
         image: DOGMILogo,
-        projectUrl: "https://example.com/dogmi",
+        projectUrl: "https://hlyhm-haaaa-aaaai-q3jyq-cai.icp0.io/",
     },
     {
         title: "BOOM DAO",
-        description:
-            "Placeholder placeholder placeholder placeholder placeholder placeholder",
+        description: "Collaborated as an original contributor to the BOOM DAO project",
         image: BOOMLogo,
-        projectUrl: "https://example.com/boom-dao",
+        projectUrl: "https://u52bf-3qaaa-aaaal-qb5wq-cai.icp0.io/",
     },
     {
         title: "Konecta",
-        description:
-            "Placeholder placeholder placeholder placeholder placeholder placeholder",
+        description: "Architected and developed the full project infrastructure",
         image: KonectaLogo,
-        projectUrl: "https://example.com/konecta",
+        projectUrl: "https://konecta.one/",
     },
     {
         title: "Vibrant",
-        description:
-            "Placeholder placeholder placeholder placeholder placeholder placeholder",
+        description: "Organized a successful NFT exhibition event in Rosario, Argentina",
         image: VibrantLogo,
-        projectUrl: "https://example.com/vibrant",
+        projectUrl: "https://x.com/byvibrant_",
     },
     {
         title: "Partnrship",
-        description:
-            "Placeholder placeholder placeholder placeholder placeholder placeholder",
+        description: "Authored a successful DFINITY grant proposal and subsequently developed the project",
         image: PartnrshipLogo,
-        projectUrl: "https://example.com/partnrship",
+        projectUrl: "https://e7bx6-iiaaa-aaaag-qm7oq-cai.icp0.io/",
     },
     {
         title: "ICPCC",
-        description:
-            "Placeholder placeholder placeholder placeholder placeholder placeholder",
+        description: "Coordinated the ICPCC global conference, overseeing more than 25 local hubs",
         image: ICPCCLogo,
-        projectUrl: "https://example.com/icpcc",
+        projectUrl: "https://icp-cc.com",
     },
     {
-        title: "Toniq",
-        description:
-            "Placeholder placeholder placeholder placeholder placeholder placeholder",
+        title: "Toniq Labs",
+        description: "Developed an automated self-mining software solution",
         image: ToniqLogo,
-        projectUrl: "https://example.com/toniq",
+        projectUrl: "https://jfosu-pqaaa-aaaal-qcifq-cai.raw.icp0.io/",
     },
     {
         title: "Breaking Bits",
-        description:
-            "Placeholder placeholder placeholder placeholder placeholder placeholder",
+        description: "Built an intuitive token creation and management platform",
         image: BreakingBitsLogo,
-        projectUrl: "https://example.com/breaking-bits",
+        projectUrl: "https://breakingbits.org",
     },
     {
-        title: "Rosetta",
-        description:
-            "Placeholder placeholder placeholder placeholder placeholder placeholder",
+        title: "Rosetta Coin",
+        description: "Created a memecoin, including website development and comprehensive tokenomics",
         image: RosettaLogo,
-        projectUrl: "https://example.com/rosetta",
+        projectUrl: "https://egwoi-nqaaa-aaaai-qpena-cai.icp0.io/",
     },
     {
         title: "Vaultbet",
-        description:
-            "Placeholder placeholder placeholder placeholder placeholder placeholder",
+        description: "Developed an interactive Plinko-style betting game on the IC blockchain",
         image: VaultbetLogo,
-        projectUrl: "https://example.com/vaultbet",
+        projectUrl: "https://vault-bet.com/arcade/3",
     },
     {
         title: "Cygnus",
-        description:
-            "Placeholder placeholder placeholder placeholder placeholder placeholder",
+        description: "Created an automated ICP cycle top-up tool with optimized pricing for canisters",
         image: CygnusLogo,
-        projectUrl: "https://example.com/cygnus",
+        projectUrl: "https://topge-siaaa-aaaai-qns6a-cai.ic0.app/",
     },
     {
         title: "Clown",
-        description:
-            "Placeholder placeholder placeholder placeholder placeholder placeholder",
+        description: "Built a decentralized autonomous organization (DAO) for Clown",
         image: ClownLogo,
-        projectUrl: "https://example.com/clown",
+        projectUrl: "https://clown.ic0.io/",
     },
     {
         title: "ICPRenegades",
-        description:
-            "Placeholder placeholder placeholder placeholder placeholder placeholder",
+        description: "Provided strategic advisory for the ICP Renegades community initiative",
         image: ICPRenegadesLogo,
-        projectUrl: "https://example.com/icp-renegades",
+        projectUrl: "https://bitcoinrenegade.net/",
     },
     {
-        title: "OIS",
-        description:
-            "Placeholder placeholder placeholder placeholder placeholder placeholder",
+        title: "Open Internet Summer",
+        description: "Assisted in organizing a global hackathon event for Motoko Bootcamp",
         image: OISLogo,
-        projectUrl: "https://example.com/ois",
+        projectUrl: "https://www.motokobootcamp.com/",
     },
     {
-        title: "Helix",
-        description:
-            "Placeholder placeholder placeholder placeholder placeholder placeholder",
+        title: "Helix Labs",
+        description: "Consulted and authored a DFINITY grant proposal for their multi-chain staking solution",
         image: HelixLogo,
-        projectUrl: "https://example.com/helix",
+        projectUrl: "https://www.helixlabs.org/",
+    },
+    {
+        title: "ModClub",
+        description: "Collaborated on feature development and platform enhancements",
+        image: ModClubLogo,
+        projectUrl: "https://ljyte-qiaaa-aaaah-qaiva-cai.raw.ic0.app/",
+    },
+    {
+        title: "AlfangoDB",
+        description: "Developed Motoko-based database architecture inspired by DynamoDB",
+        image: AlfangoDBLogo,
+        projectUrl: "https://github.com/sagcryptoicp/alfangodb",
+    },
+    {
+        title: "Node Monitor",
+        description: "Built a robust monitoring solution for ICP node providers",
+        image: NodeMonitorLogo,
+        projectUrl: "https://nodemonitor.aviatelabs.co/",
     },
 ];
 
@@ -154,6 +161,7 @@ const Projects: React.FC = () => {
     const svgHeight = 1048;
 
     const [activeProject, setActiveProject] = useState<ProjectData | null>(null);
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     const bubbleConfigs: BubbleConfig[] = [
         // Group 1
@@ -185,12 +193,18 @@ const Projects: React.FC = () => {
         { top: 100 - 33 - 6.67, left: 70, leftMobile: 78.5, sizePercent: 5 },
     ];
 
-    const randomProjects = useMemo(() => {
-        return bubbleConfigs.map(() => {
-            const randomIndex = Math.floor(Math.random() * projects.length);
-            return projects[randomIndex];
-        });
-    }, [projects, bubbleConfigs]);
+    const randomProjects = useMemo<ProjectData[]>(() => {
+        const total = bubbleConfigs.length;
+        const pool = [...projects].sort(() => Math.random() - 0.5);
+        if (total <= pool.length) return pool.slice(0, total);
+
+        // if you ever have fewer projects than bubbles:
+        const out = [...pool];
+        while (out.length < total) {
+            out.push(projects[Math.floor(Math.random() * projects.length)]);
+        }
+        return out;
+    }, []);
 
     const centerX = isMobile ? svgWidth / 2 + 200 : svgWidth / 2;
     const centerY = svgHeight * 0.33;
@@ -2092,50 +2106,62 @@ const Projects: React.FC = () => {
                         <stop offset={1} stopColor="#2BC9EC" />
                     </linearGradient>
                 </defs>
-                {!activeProject &&
-                    bubbleConfigs.map((config, index) => {
-                        const effectiveLeft = isMobile ? (config.leftMobile ?? config.left) : config.left;
-                        const x = (effectiveLeft / 100) * svgWidth + (isMobile ? 200 : 0);
-                        const y = (config.top / 100) * svgHeight;
-                        const sizePx = (config.sizePercent / 100) * svgHeight;
-                        const project = randomProjects[index];
+                {bubbleConfigs.map((config, index) => {
+                    // Hide every bubble except the active one (once a project is selected)
 
-                        return (
-                            <g
-                                key={index}
-                                transform={`translate(${x}, ${y})`}
-                                style={{ cursor: 'pointer' }}
-                                onClick={() => setActiveProject(project)}
-                            >
-                                <foreignObject width={sizePx} height={sizePx}>
-                                    <ICPBubble
-                                        imageSrc={project.image}
-                                        minSize={`${sizePx}px`}
-                                        preferredSize={`${sizePx}px`}
-                                        maxSize={`${sizePx}px`}
-                                    />
-                                </foreignObject>
-                            </g>
-                        );
-                    })
-                }
+                    const effectiveLeft = isMobile ? config.leftMobile ?? config.left : config.left;
+                    const startX = (effectiveLeft / 100) * svgWidth + (isMobile ? 200 : 0);
+                    const startY = (config.top / 100) * svgHeight;
+                    const startSize = (config.sizePercent / 100) * svgHeight;
 
-                {/* If a project is active, render only that bubble at the center */}
-                {activeProject && (
-                    <g
-                        transform={`translate(${centerX - activeSizePx / 2}, ${centerY - activeSizePx / 2})`}
-                        style={{ cursor: 'default' }}
-                    >
-                        <foreignObject width={activeSizePx} height={activeSizePx}>
-                            <ICPBubble
-                                imageSrc={activeProject.image}
-                                minSize={`${activeSizePx}px`}
-                                preferredSize={`${activeSizePx}px`}
-                                maxSize={`${activeSizePx}px`}
-                            />
-                        </foreignObject>
-                    </g>
-                )}
+                    const isActive = activeProject && index === activeIndex;
+
+                    /* ---------- FINAL transform for active bubble ---------- */
+                    let transform = `translate(${startX}px, ${startY}px)`;
+                    let scale = 1;
+
+                    if (isActive) {
+                        scale = activeSizePx / startSize; // how much larger it needs to get
+                        const targetX = centerX - (startSize * scale) / 2;
+                        const targetY = centerY - (startSize * scale) / 2;
+                        transform = `translate(${targetX}px, ${targetY}px) scale(${scale})`;
+                    }
+
+                    const project = randomProjects[index];
+                    const opacity = activeProject
+                        ? isActive ? 1 : 0          // fade others out
+                        : 1;
+
+                    return (
+                        <g
+                            key={index}
+                            style={{
+                                transformBox: 'fill-box',
+                                transformOrigin: 'top left',
+                                transition: `transform 0.5s ease, opacity 400ms ease`,
+                                cursor: isActive ? 'default' : 'pointer',
+                                pointerEvents: isActive || !activeProject ? 'auto' : 'none',
+                                opacity,
+                                transform,
+                            }}
+                            onClick={() => {
+                                if (!isActive) {
+                                    setActiveProject(project);
+                                    setActiveIndex(index);
+                                }
+                            }}
+                        >
+                            <foreignObject width={startSize} height={startSize}>
+                                <ICPBubble
+                                    imageSrc={project.image}
+                                    minSize={`${startSize}px`}
+                                    preferredSize={`${startSize}px`}
+                                    maxSize={`${startSize}px`}
+                                />
+                            </foreignObject>
+                        </g>
+                    );
+                })}
             </svg>
 
             {!activeProject && (
@@ -2150,6 +2176,9 @@ const Projects: React.FC = () => {
                             ? 'translate(-40%, calc(1vw + 10px))'
                             : 'translate(-40%, 35%)',
                         width: isMobile ? '8vw' : '4vw',
+                        transition: `opacity 400ms ease`,
+                        opacity: activeProject ? 0 : 1,
+                        pointerEvents: 'none',
                     }}
                 />
             )}

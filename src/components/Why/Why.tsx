@@ -176,7 +176,7 @@ const Why: React.FC = () => {
                                 </div>
                             </a>
                         </div>
-                        <p className="ricardo-text">$ICP dev and advisor</p>
+                        <p className="ricardo-text">AI & Blockchain dev and advisor</p>
                     </div>
 
                     <div className="panas-middle-circle" onClick={handleMiddleCircleClick}>
@@ -209,7 +209,7 @@ const Why: React.FC = () => {
                                 }}
                             />
                         </div>
-                        <p className="sagar-text">$ICP dev and advisor</p>
+                        <p className="sagar-text">AI & Blockchain dev and advisor</p>
                     </div>
                 </div>
             </div>
