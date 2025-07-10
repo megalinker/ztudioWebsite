@@ -3,23 +3,19 @@ import './Projects.css';
 import { useMediaQuery } from 'react-responsive';
 
 import ToniqLogo from '/assets/projectLogos/toniqLogo.webp'
-import BreakingBitsLogo from '/assets/projectLogos/BreakingBitsLogo.webp'
 import RosettaLogo from '/assets/projectLogos/RosettaLogo.webp'
 import VibrantLogo from '/assets/projectLogos/VibrantLogo.webp'
 import KonectaLogo from '/assets/projectLogos/KonectaLogo.svg'
 import VaultbetLogo from '/assets/projectLogos/VaultbetLogo.webp'
 import CygnusLogo from '/assets/projectLogos/CygnusLogo.webp'
-import ClownLogo from '/assets/projectLogos/ClownLogo.webp'
-import ICPCCLogo from '/assets/projectLogos/ICPCCLogo.webp'
-import ICPRenegadesLogo from '/assets/projectLogos/ICPRenegadesLogo.webp'
-import BOOMLogo from '/assets/projectLogos/BOOMLogo.webp'
+import TalusLogo from '/assets/projectLogos/TalusLogo.png'
 import DOGMILogo from '/assets/projectLogos/DOGMILogo.webp'
 import OISLogo from '/assets/projectLogos/OISLogo.webp'
 import HelixLogo from '/assets/projectLogos/HelixLogo.webp'
 import PartnrshipLogo from '/assets/projectLogos/PartnrshipLogo.svg'
 import ModClubLogo from '/assets/projectLogos/ModClubLogo.webp'
 import AlfangoDBLogo from '/assets/projectLogos/AlfangoDBLogo.webp'
-import NodeMonitorLogo from '/assets/projectLogos/NodeMonitorLogo.png'
+import NodeMonitorLogo from '/assets/projectLogos/NodeMonitorLogoMin.png'
 
 import ICPBubble from '../Elements/ICPBubble/ICPBubble';
 import ZtudioIso from '/assets/ztudioIso.svg'
@@ -48,12 +44,6 @@ const projects: ProjectData[] = [
         projectUrl: "https://hlyhm-haaaa-aaaai-q3jyq-cai.icp0.io/",
     },
     {
-        title: "BOOM DAO",
-        description: "Collaborated as an original contributor to the BOOM DAO project",
-        image: BOOMLogo,
-        projectUrl: "https://u52bf-3qaaa-aaaal-qb5wq-cai.icp0.io/",
-    },
-    {
         title: "Konecta",
         description: "Architected and developed the full project infrastructure",
         image: KonectaLogo,
@@ -63,7 +53,7 @@ const projects: ProjectData[] = [
         title: "Vibrant",
         description: "Organized a successful NFT exhibition event in Rosario, Argentina",
         image: VibrantLogo,
-        projectUrl: "https://x.com/byvibrant_",
+        projectUrl: "https://www.youtube.com/watch?v=029ck5Zm2o4",
     },
     {
         title: "Partnrship",
@@ -72,22 +62,10 @@ const projects: ProjectData[] = [
         projectUrl: "https://e7bx6-iiaaa-aaaag-qm7oq-cai.icp0.io/",
     },
     {
-        title: "ICPCC",
-        description: "Coordinated the ICPCC global conference, overseeing more than 25 local hubs",
-        image: ICPCCLogo,
-        projectUrl: "https://icp-cc.com",
-    },
-    {
         title: "Toniq Labs",
         description: "Developed an automated self-mining software solution",
         image: ToniqLogo,
-        projectUrl: "https://jfosu-pqaaa-aaaal-qcifq-cai.raw.icp0.io/",
-    },
-    {
-        title: "Breaking Bits",
-        description: "Built an intuitive token creation and management platform",
-        image: BreakingBitsLogo,
-        projectUrl: "https://breakingbits.org",
+        projectUrl: "https://toniqlabs.com/",
     },
     {
         title: "Rosetta Coin",
@@ -106,18 +84,6 @@ const projects: ProjectData[] = [
         description: "Created an automated ICP cycle top-up tool with optimized pricing for canisters",
         image: CygnusLogo,
         projectUrl: "https://topge-siaaa-aaaai-qns6a-cai.ic0.app/",
-    },
-    {
-        title: "Clown",
-        description: "Built a decentralized autonomous organization (DAO) for Clown",
-        image: ClownLogo,
-        projectUrl: "https://clown.ic0.io/",
-    },
-    {
-        title: "ICPRenegades",
-        description: "Provided strategic advisory for the ICP Renegades community initiative",
-        image: ICPRenegadesLogo,
-        projectUrl: "https://bitcoinrenegade.net/",
     },
     {
         title: "Open Internet Summer",
@@ -148,6 +114,12 @@ const projects: ProjectData[] = [
         description: "Built a robust monitoring solution for ICP node providers",
         image: NodeMonitorLogo,
         projectUrl: "https://nodemonitor.aviatelabs.co/",
+    },
+    {
+        title: "Talus Network",
+        description: "DeFi platform currently under development based on SUI Blockchain.",
+        image: TalusLogo,
+        projectUrl: "https://talus.network/",
     },
 ];
 

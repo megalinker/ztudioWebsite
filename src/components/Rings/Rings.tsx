@@ -5,23 +5,13 @@ import ICPBubble from '../Elements/ICPBubble/ICPBubble';
 import ICPLogo from '/assets/projectLogos/icplogo.svg';
 
 import ToniqLogo from '/assets/projectLogos/toniqLogo.webp'
-import BreakingBitsLogo from '/assets/projectLogos/BreakingBitsLogo.webp'
-import RosettaLogo from '/assets/projectLogos/RosettaLogo.webp'
 import VibrantLogo from '/assets/projectLogos/VibrantLogo.webp'
 import KonectaLogo from '/assets/projectLogos/KonectaLogo.svg'
 import VaultbetLogo from '/assets/projectLogos/VaultbetLogo.webp'
-import CygnusLogo from '/assets/projectLogos/CygnusLogo.webp'
-import ClownLogo from '/assets/projectLogos/ClownLogo.webp'
-import ICPCCLogo from '/assets/projectLogos/ICPCCLogo.webp'
-import ICPRenegadesLogo from '/assets/projectLogos/ICPRenegadesLogo.webp'
-import BOOMLogo from '/assets/projectLogos/BOOMLogo.webp'
 import DOGMILogo from '/assets/projectLogos/DOGMILogo.webp'
-import OISLogo from '/assets/projectLogos/OISLogo.webp'
 import HelixLogo from '/assets/projectLogos/HelixLogo.webp'
-import PartnrshipLogo from '/assets/projectLogos/PartnrshipLogo.svg'
-import ModClubLogo from '/assets/projectLogos/ModClubLogo.webp'
-import AlfangoDBLogo from '/assets/projectLogos/AlfangoDBLogo.webp'
-import NodeMonitorLogo from '/assets/projectLogos/NodeMonitorLogo.png'
+import NodeMonitorLogo from '/assets/projectLogos/NodeMonitorLogoMin.png'
+import TalusLogo from '/assets/projectLogos/TalusLogo.png'
 
 import './Rings.css';
 
@@ -33,24 +23,14 @@ const Rings: React.FC = () => {
 
 
         const availableLogos = [
+            NodeMonitorLogo,
+            TalusLogo,
             ToniqLogo,
-            BreakingBitsLogo,
-            RosettaLogo,
             VibrantLogo,
             KonectaLogo,
             VaultbetLogo,
-            CygnusLogo,
-            ClownLogo,
-            ICPCCLogo,
-            ICPRenegadesLogo,
-            BOOMLogo,
             DOGMILogo,
-            OISLogo,
             HelixLogo,
-            PartnrshipLogo,
-            ModClubLogo,
-            AlfangoDBLogo,
-            NodeMonitorLogo
         ];
 
         const shuffleArray = (array: any[]) => {

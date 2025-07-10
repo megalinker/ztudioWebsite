@@ -155,7 +155,9 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                         left: '50%',
                         transform: 'translateX(-50%)'
                     }}>
-                        <AnimatedButtonComponent onClick={() => scrollToSection('contact')}                        >Start Building</AnimatedButtonComponent>
+                        <AnimatedButtonComponent onClick={() => window.open("https://calendly.com/capuzr/30-min", "_blank")}>
+                            Let’s have a call
+                        </AnimatedButtonComponent>
                     </div>
                 )}
                 {!isKindOfMobile && (

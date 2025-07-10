@@ -38,6 +38,56 @@
     margin-top: 3vw;
 }
 
+.home-button-row {
+  display: flex;
+  gap: 1rem;           /* space between the two buttons */
+}
+
+/* Make both buttons exactly the same width: */
+.home-button-row > * {
+  height: 3.5rem;
+}
+
+/* If your AnimatedButton has an extra wrapper, override its margin: */
+.home-button-row .animated-button-container {
+  height: 3.5rem;
+  width: 100%;
+}
+
+.submitButton {
+    margin: 0 !important;
+  width: 100%;
+  height: 3.5rem;      /* pick the same height you’re using on AnimatedButton */
+  font-size: 1rem;     /* match text sizing too */
+  border-radius: 999px;
+  
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1); /* animate transforms */
+    /* make sure it’s rendered as its own stacking context */
+  will-change: transform;
+  transform-origin: center center;
+  display: inline-flex;              /* center its content */
+  align-items: center;
+  justify-content: center;
+}
+
+.submitButton,
+.animated-button {
+  padding-top:   0.75rem;
+  padding-bottom:0.75rem;
+}
+
+.submitButton:hover,
+.submitButton:focus {
+  transform: scale(1.1);    /* or whatever zoom factor you like */
+}
+
+/* If you want the text/icon inside to stay perfectly centered: */
+.submitButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 1000px) {
     .home-container {
         flex-direction: column;

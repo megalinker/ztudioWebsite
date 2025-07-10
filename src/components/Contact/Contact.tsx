@@ -11,11 +11,12 @@ import { useMediaQuery } from 'react-responsive';
 
 const buttonOptions = [
     "Architecture & Concept",
-    "Innovation/Ideation",
-    "Grant Evaluation",
-    "DFINITY Grant Proposal",
-    "Whitepaper & Docs",
-    "ICP/Web3 Development",
+    "UX/UI Design & Prototyping",
+    "Brand Development & Design Systems",
+    "Frontend Development Solutions",
+    "Web3 Development",
+    "Backend Development",
+    "Full-Stack Application Development",
     "Other"
 ];
 

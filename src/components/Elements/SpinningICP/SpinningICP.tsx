@@ -94,7 +94,7 @@ const SpinningICP: React.FC = () => {
                         strokeWidth={0}
                     />
                 </g>
-                <g id="ICPLogo">
+                {/* <g id="ICPLogo">
                     <g id="Internet">
                         <path
                             d="M174.11,178.87v-16.27h4.38v16.27h-4.38Z"
@@ -196,7 +196,7 @@ const SpinningICP: React.FC = () => {
                             strokeWidth={0}
                         />
                     </g>
-                </g>
+                </g> */}
             </g>
         </svg>
     );
