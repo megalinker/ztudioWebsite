@@ -11,6 +11,8 @@ import GithubIcon from '/assets/SocialMediaIcons/GithubIcon.svg'
 import VibrantLogo from '/assets/projectLogos/VibrantLogo.webp';
 import KonectaLogo from '/assets/projectLogos/KonectaLogo.svg';
 import ICPCCLogo from '/assets/projectLogos/ICPCCLogo.webp';
+import TalusLogo from '/assets/projectLogos/TalusLogo.png';
+import NodeMonitorLogo from '/assets/projectLogos/NodeMonitorLogoMin.png';
 import BOOMLogo from '/assets/projectLogos/BOOMLogo.webp';
 import DOGMILogo from '/assets/projectLogos/DOGMILogo.webp';
 import PartnrshipLogo from '/assets/projectLogos/PartnrshipLogo.svg';
@@ -19,46 +21,18 @@ import ExpandableDivs, { ReceivedCellData } from '../Elements/ExpansableDivs/Exp
 const cells: [
     ReceivedCellData,
     ReceivedCellData,
-    ReceivedCellData,
-    ReceivedCellData,
-    ReceivedCellData,
-    ReceivedCellData
 ] = [
         {
-            title: "DOGMI",
+            title: "Isaac Valadez - Talus.network",
             description:
-                "Woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof woof",
-            image: DOGMILogo,
+                "",
+            image: TalusLogo,
         },
         {
-            title: "BOOM DAO",
+            title: "Louis Velayo - Node Monitor from Aviate Labs",
             description:
-                "The help you provided to Elementum minigames have truly united the community. Now, with DIGGY fueling even more games and promotions, we're excited to see what's next!",
-            image: BOOMLogo,
-        },
-        {
-            title: "Konecta",
-            description:
-                "After one year, the project remains unfinished. Excuses like “we’re building a more ambitious app” don’t cut it, and rebellious Kami is out of control—though the rest was fine.",
-            image: KonectaLogo,
-        },
-        {
-            title: "Vibrant",
-            description:
-                "Che, la expo fue una masa total, boludo! Los NFT estuvieron re piola y con garra! Seguí haciendo tremendo laburo, y te aseguro que la próxima armamos un quilombo que ni te imaginás.",
-            image: VibrantLogo,
-        },
-        {
-            title: "Partnrship",
-            description:
-                "They compressed two months' work into one—a remarkable feat showcasing their relentless drive. Plus, they added bonus features that improved quality and saved future work.",
-            image: PartnrshipLogo,
-        },
-        {
-            title: "ICPCC",
-            description:
-                "That guy with the Z pulled a Houdini on the cash, but aside from his disappearing act, awesome job. Don't miss the airdrop next year!",
-            image: ICPCCLogo,
+                "",
+            image: NodeMonitorLogo,
         },
     ];
 
@@ -135,9 +109,7 @@ const Why: React.FC = () => {
                         </defs>
                     </svg>
                     <p>
-                        We are passionate about the Internet Computer Protocol and believe in
-                        the power of decentralization. Our mission is to drive project growth
-                        through innovative web3 solutions.
+                        We are passionate about building applications using cutting-edge tech and trends. Our mission is to drive project growth through innovative technologies.
                     </p>
                 </div>
                 <div className="why-circle">

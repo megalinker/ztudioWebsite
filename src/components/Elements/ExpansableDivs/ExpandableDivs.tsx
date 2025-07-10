@@ -15,10 +15,6 @@ interface ExpandableDivsProps {
     cells: [
         ReceivedCellData,
         ReceivedCellData,
-        ReceivedCellData,
-        ReceivedCellData,
-        ReceivedCellData,
-        ReceivedCellData
     ];
 }
 

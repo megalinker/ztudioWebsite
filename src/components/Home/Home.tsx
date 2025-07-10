@@ -51,8 +51,20 @@ const Home: React.FC<HomeProps> = ({ scrollToSection }) => {
                 <h1>{text1}</h1>
                 <h1 className="home-pink">{text2}</h1>
                 <p>{text3}</p>
-                <div className="home-button">
-                    <AnimatedButtonComponent onClick={() => scrollToSection('contact')}>Start Building</AnimatedButtonComponent>
+                <div className="home-button-row">
+                    <AnimatedButtonComponent
+                    onClick={() => scrollToSection('contact')}
+                    >
+                        Contact Us
+                    </AnimatedButtonComponent>
+
+                    <button
+                    className="submitButton"
+                    onClick={() => window.open("https://calendly.com/capuzr/30-min", "_blank")}
+                    >
+                        Let’s have a call
+                    </button>
+
                 </div>
             </div>
             <div className="home-animated-component">

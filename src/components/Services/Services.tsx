@@ -4,32 +4,32 @@ import { useMediaQuery } from 'react-responsive';
 const hoverTexts: { [key: string]: JSX.Element } = {
     Point1: (
         <>
-            We transform your vision into a robust technical blueprint, aligning creative ideas with scalable ICP strategies. <br />Our comprehensive approach ensures every project is built on a solid, forward-thinking foundation.
+            We transform your vision into a comprehensive technical blueprint, defining the optimal technology stack and system architecture for your project.
         </>
     ),
     Point2: (
         <>
-            Our collaborative sessions ignite breakthrough ideas and foster creative problem-solving. <br />We bring together diverse expertise to turn raw concepts into actionable web3 strategies.
+            We create functional, interactive prototypes using cutting-edge tools, giving you a complete visual and experiential preview before development begins.
         </>
     ),
     Point3: (
         <>
-            We rigorously assess your grant proposals to highlight strengths and identify improvement areas. <br />Our expert insights refine your narrative to maximize funding potential and impact.
+            From concept to complete brand kit, we develop your visual identity and create comprehensive asset libraries for consistent brand implementation.
         </>
     ),
     Point4: (
         <>
-            We specialize in crafting compelling grant proposals that showcase your project's innovation. <br />From structure to storytelling, our team ensures your application meets and exceeds review criteria.
+            Custom user interfaces built with modern frameworks like React, NextJS, and Tailwind, optimized for performance and user experience.
         </>
     ),
     Point5: (
         <>
-            Our whitepapers and technical documents clearly articulate your project's vision and technical framework. <br />We deliver authoritative content that resonates with both experts and investors alike.
+            Complete backend solutions spanning Web2 and Web3 technologies, including smart contract development across multiple blockchain ecosystems.
         </>
     ),
     Point6: (
         <>
-            Our custom ICP & Web3 solutions deliver secure, scalable development tailored to your vision.  <br />We ensure seamless integration that accelerates your digital innovation.
+            End-to-end application development from concept to deployment, integrating all components into a cohesive, production-ready solution.
         </>
     ),
 };
@@ -57,37 +57,37 @@ const servicesList = [
         id: "Point1",
         title: "Strategic Architecture & Concept Design",
         description:
-            "We transform your vision into a robust technical blueprint, aligning creative ideas with scalable ICP strategies. Our comprehensive approach ensures every project is built on a solid, forward-thinking foundation.",
+            "We transform your vision into a comprehensive technical blueprint, defining the optimal technology stack and system architecture for your project.",
     },
     {
         id: "Point2",
-        title: "Innovation & Ideation Sessions",
+        title: "UX/UI Design & Prototyping",
         description:
-            "Our collaborative sessions ignite breakthrough ideas and foster creative problem-solving. We bring together diverse expertise to turn raw concepts into actionable web3 strategies.",
+            "We create functional, interactive prototypes using cutting-edge tools, giving you a complete visual and experiential preview before development begins.",
     },
     {
         id: "Point3",
-        title: "Grant Proposal Evaluation & Optimization",
+        title: "Brand Development & Design Systems",
         description:
-            "We rigorously assess your grant proposals to highlight strengths and identify improvement areas. Our expert insights refine your narrative to maximize funding potential and impact.",
+            "From concept to complete brand kit, we develop your visual identity and create comprehensive asset libraries for consistent brand implementation.",
     },
     {
         id: "Point4",
-        title: "DFINITY Grant Proposal Development",
+        title: "Frontend Development Solutions",
         description:
-            "We specialize in crafting compelling grant proposals that showcase your project's innovation. From structure to storytelling, our team ensures your application meets and exceeds review criteria.",
+            "Custom user interfaces built with modern frameworks like React, NextJS, and Tailwind, optimized for performance and user experience.",
     },
     {
         id: "Point5",
-        title: "Technical Whitepaper & Documentation Services",
+        title: "Backend & Smart Contract Development",
         description:
-            "Our whitepapers and technical documents clearly articulate your project's vision and technical framework. We deliver authoritative content that resonates with both experts and investors alike.",
+            "Complete backend solutions spanning Web2 and Web3 technologies, including smart contract development across multiple blockchain ecosystems.",
     },
     {
         id: "Point6",
-        title: "Bespoke ICP & Web3 Development Solutions",
+        title: "Full-Stack Application Development",
         description:
-            "Our custom ICP & Web3 solutions deliver secure, scalable development tailored to your vision. We ensure seamless integration that accelerates your digital innovation.",
+            "End-to-end application development from concept to deployment, integrating all components into a cohesive, production-ready solution.",
     },
 ];
 
@@ -514,8 +514,8 @@ const Services: React.FC = () => {
                                 fontSize="22"
                                 textAnchor="middle"
                             >
-                                <tspan x="160" dy="0">Strategic Architecture</tspan>
-                                <tspan x="160" dy="1.2em">& Concept Design</tspan>
+                                <tspan x="160" dy="0">Strategic Architecture &</tspan>
+                                <tspan x="160" dy="1.2em">Concept Design</tspan>
                             </text>
                         </g>
                     </g>
@@ -555,8 +555,8 @@ const Services: React.FC = () => {
                                 fontSize="22"
                                 textAnchor="middle"
                             >
-                                <tspan x="160" dy="0">Innovation & Ideation</tspan>
-                                <tspan x="160" dy="1.2em">Sessions</tspan>
+                                <tspan x="160" dy="0">UX/UI Design & </tspan>
+                                <tspan x="160" dy="1.2em">Prototyping</tspan>
                             </text>
                         </g>
                     </g>
@@ -596,8 +596,8 @@ const Services: React.FC = () => {
                                 fontSize="22"
                                 textAnchor="middle"
                             >
-                                <tspan x="160" dy="0">Grant Proposal Evaluation</tspan>
-                                <tspan x="160" dy="1.2em">& Optimization</tspan>
+                                <tspan x="160" dy="0">Brand Development &</tspan>
+                                <tspan x="160" dy="1.2em">Design Systems</tspan>
                             </text>
                         </g>
                     </g>
@@ -663,8 +663,8 @@ const Services: React.FC = () => {
                                 fontSize="22"
                                 textAnchor="middle"
                             >
-                                <tspan x="1175" dy="0">DFINITY Grant Proposal</tspan>
-                                <tspan x="1175" dy="1.2em">Development</tspan>
+                                <tspan x="1175" dy="0">Frontend Development</tspan>
+                                <tspan x="1175" dy="1.2em">Solutions</tspan>
                             </text>
                         </g>
                     </g>
@@ -704,8 +704,8 @@ const Services: React.FC = () => {
                                 fontSize="22"
                                 textAnchor="middle"
                             >
-                                <tspan x="1175" dy="0">Technical Whitepaper &</tspan>
-                                <tspan x="1175" dy="1.2em">Documentation Services</tspan>
+                                <tspan x="1175" dy="0">Backend &</tspan>
+                                <tspan x="1175" dy="1.2em">Smart Contract Development</tspan>
                             </text>
                         </g>
                     </g>
@@ -745,8 +745,8 @@ const Services: React.FC = () => {
                                 fontSize="22"
                                 textAnchor="middle"
                             >
-                                <tspan x="1175" dy="0">Bespoke ICP & Web3</tspan>
-                                <tspan x="1175" dy="1.2em">Development Solutions</tspan>
+                                <tspan x="1175" dy="0">Full-Stack Application</tspan>
+                                <tspan x="1175" dy="1.2em">Development</tspan>
                             </text>
                         </g>
                     </g>
@@ -850,8 +850,8 @@ const Services: React.FC = () => {
                         hoverTexts[hoveredPoint]
                     ) : (
                         <>
-                            Every project is an opportunity to innovate and exceed expectations; <br />
-                            we deliver transformative solutions while building enduring partnerships.
+                            We deliver complete application solutions using any technology stack required. <br />
+                            From initial concept to post-launch support, we handle every aspect of your project with modern tools and proven methodologies.
                         </>
                     )}
                 </div>

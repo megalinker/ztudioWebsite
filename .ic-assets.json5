@@ -1,0 +1,9 @@
+[
+  {
+    // Se aplica a TODOS los assets
+    "match": "**/*",
+
+    // Deshabilita por completo la cabecera CSP
+    "security_policy": "disabled"
+  }
+]

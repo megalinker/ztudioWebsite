@@ -6,16 +6,16 @@ import EmailIcon from '/assets/contactFormIcons/emailIcon.svg'
 import XIcon from '/assets/SocialMediaIcons/XIcon.svg'
 import EmailIconC from '/assets/SocialMediaIcons/EmailIconC.svg'
 import TelegramIcon from '/assets/SocialMediaIcons/TelegramIcon.svg'
-import ContactBg from '/assets/contactLines.svg'
 import { useMediaQuery } from 'react-responsive';
 
 const buttonOptions = [
     "Architecture & Concept",
-    "Innovation/Ideation",
-    "Grant Evaluation",
-    "DFINITY Grant Proposal",
-    "Whitepaper & Docs",
-    "ICP/Web3 Development",
+    "UX/UI Design & Prototyping",
+    "Brand Development & Design Systems",
+    "Frontend Development Solutions",
+    "Web3 Development",
+    "Backend Development",
+    "Full-Stack Application Development",
     "Other"
 ];
 
@@ -28,6 +28,9 @@ const Contact: React.FC = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [statusMsg, setStatusMsg] = useState<string | null>(null);
+    const CONTACT_ENDPOINT = "https://ztudio-website-email-service.vercel.app/api/contact";
+
 
     const toggleButton = (index: number) => {
         setSelectedButtons(prev =>
@@ -41,21 +44,35 @@ const Contact: React.FC = () => {
     const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     const isValidMessage = (message: string) => message.trim().length >= 10;
 
-    const handleSubmit = () => {
-        if (!isValidName(name)) {
-            alert('Name must be at least 3 characters long.');
-            return;
-        }
-        if (!isValidEmail(email)) {
-            alert('Please enter a valid email address.');
-            return;
-        }
-        if (!isValidMessage(message)) {
-            alert('Message must be at least 10 characters long.');
-            return;
-        }
-        alert('Message submitted.');
-    };
+
+  const handleSubmit = async () => {
+    // 1) Validaciones
+    if (!isValidName(name)) {
+      alert('Name must be at least 3 characters long.');
+      return;
+    }
+    if (!isValidEmail(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+    if (!isValidMessage(message)) {
+      alert('Message must be at least 10 characters long.');
+      return;
+    }
+
+    // 2) Prepara payload
+    const payload = { name, email, message, categories: selectedButtons.map(i => buttonOptions[i]).join(', ') };
+  const resp = await fetch(CONTACT_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+  if (resp.ok) setStatusMsg('✅ Mensaje enviado');
+  else {
+    const err = await resp.json();
+    setStatusMsg(`❌ ${err.error}`);
+  }
+};
 
     return (
         <div className="contact-container" >
@@ -130,6 +147,8 @@ const Contact: React.FC = () => {
                 <button className="submitButton" onClick={handleSubmit}>
                     Send
                 </button>
+
+                {statusMsg && <p className="status-message">{statusMsg}</p>}
             </div>
         </div>
     );
