@@ -12,9 +12,6 @@ import Projects from './components/Projects/Projects';
 import { persons } from './data/persons';
 import { init } from "@emailjs/browser";
 
-init("r4GY2flLTj3pzYnAB");
-
-
 interface SectionRefs {
   [key: string]: React.RefObject<HTMLDivElement>;
 }
