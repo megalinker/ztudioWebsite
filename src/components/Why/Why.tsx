@@ -25,13 +25,13 @@ const cells: [
         {
             title: "Isaac Valadez - Talus.network",
             description:
-                "",
+                "We hired Ztudio after a bad experience with other agency and they've been a breath of fresh air! Their team is responsive, proactive, and fast. I've found their consultation insightful and helpful in steering our product direction, so it feels like having a contributing partner rather than just a 3rd party contractor",
             image: TalusLogo,
         },
         {
             title: "Louis Velayo - Node Monitor from Aviate Labs",
             description:
-                "",
+                "Working with Ztudio was the right move. Their team remained aligned with our objectives. We value their direct, constant communication, and the way they managed every stage of the project. The result was what we were looking for and was achieved successfully",
             image: NodeMonitorLogo,
         },
     ];

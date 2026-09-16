@@ -10,7 +10,6 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Projects from './components/Projects/Projects';
 import { persons } from './data/persons';
-import { init } from "@emailjs/browser";
 
 interface SectionRefs {
   [key: string]: React.RefObject<HTMLDivElement>;
